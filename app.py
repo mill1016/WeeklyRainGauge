@@ -66,6 +66,12 @@ ax2.plot(df['Date'], df['7-Day Cumulative'], color='steelblue', label='7-Day Cum
 ax2.set_ylabel('7-Day Cumulative Total [in]', color='black')
 ax2.tick_params(axis='y', labelcolor='black')
 
+y_min = 0  # Assuming you always want to start at 0
+y_max = max(df['Avg Precip [in]'].max(), df['7-Day Cumulative'].max())*1.1
+# Set both axes to the same y-limits
+ax1.set_ylim(y_min, y_max)
+ax2.set_ylim(y_min, y_max)
+
 fig.suptitle("Edina Precipitation - Last 7 Days")
 lines1, labels1 = ax1.get_legend_handles_labels()
 lines2, labels2 = ax2.get_legend_handles_labels()
