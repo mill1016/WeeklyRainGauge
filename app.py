@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 API_KEY = "e1f10a1e78da46f5b10a1e78da96f525"
-STATIONS = ["KMNEDINA46", "KMNMINNE53", "KMNMINNE824"]
+STATIONS = ["KMNMINNE101", "KMNEDINA46", "KMNMINNE53", "KMNMINNE824", "KMNSAINT469"]
 BASE_URL = "https://api.weather.com/v2/pws/history/all"
 
 def get_precip_for_day(station_id, date_str):
