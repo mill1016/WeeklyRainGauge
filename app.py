@@ -34,7 +34,7 @@ def get_precip_for_day(station_id, date_str):
         return 0.0
 
 st.set_page_config(page_title="Edina Precip Tracker", layout="wide")
-st.title("🌧️ Edina Precipitation Tracker")
+#st.title("🌧️ Edina Precipitation Tracker")
 
 # Loop through last 7 days
 today = date.today()
