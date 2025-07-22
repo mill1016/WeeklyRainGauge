@@ -54,7 +54,7 @@ df["7-Day Cumulative"] = df["Avg Precip [in]"].rolling(7, min_periods=1).sum()
 
 # Plotting
 fig, ax1 = plt.subplots(figsize=(10, 6))
-ax1.bar(df['Date'], df['Avg Precip [in]'], color='skyblue', label='Daily Precipitation')
+ax1.bar(df['Date'], df['Avg Precip [in]'], color='cornflowerblue', label='Daily Precipitation')
 ax1.set_ylabel('Daily Precipitation [in]', color='black')
 ax1.tick_params(axis='y', labelcolor='black')
 ax1.set_xlabel('Date')
@@ -62,7 +62,7 @@ ax1.set_xticks(df['Date'])
 ax1.set_xticklabels(df['Date'].dt.strftime('%a\n%m-%d'))
 
 ax2 = ax1.twinx()
-ax2.plot(df['Date'], df['7-Day Cumulative'], color='darkred', label='7-Day Cumulative')
+ax2.plot(df['Date'], df['7-Day Cumulative'], color='steelblue', label='7-Day Cumulative')
 ax2.set_ylabel('7-Day Cumulative Total [in]', color='black')
 ax2.tick_params(axis='y', labelcolor='black')
 
